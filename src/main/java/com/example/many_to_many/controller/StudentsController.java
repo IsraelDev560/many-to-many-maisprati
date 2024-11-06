@@ -24,7 +24,7 @@ public class StudentsController {
         return studentsService.add(request);
     }
 
-    @GetMapping("/courses/{id}/students")
+    @GetMapping("/courses/{id}")
     public Page<StudentResponse> list(@PathVariable Long id, Pageable pageable){
         return getStudentsByCourseService.list(id, pageable);
     }
